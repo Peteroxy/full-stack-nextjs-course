@@ -7,8 +7,9 @@ const Project = g.type('Project', {
   image: g.url(),
   liveSiteUrl: g.url(),
   githubUrl: g.url(),
-  category: g.string().search(),
-  createdBy:g.ref(()=>User)
+  category: g.string(),
+  
+  // createdBy:g.ref(User)
   
 })
 
@@ -21,20 +22,13 @@ const User = g.type('User', {
   description: g.string(),
   githubUrl: g.url().optional(),
   linkedInUrl: g.url().optional(),
-  projects: g.ref(()=>Project).list().optional(),
+  projects: g.ref(Project).list().optional(),
 })
 
 
 
 export default config({
   graph: g,
-  
-  auth: {
-    
-    rules: (rules) => {
-      rules.public()
-    },
-  },
   
 })
 
