@@ -1,5 +1,5 @@
 {
-  "name": "--config-format=typescript",
+  "name": "grafbase.config.ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
